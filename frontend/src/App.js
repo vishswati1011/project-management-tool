@@ -1,10 +1,21 @@
 
 import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+import UnAuthRoutes from './routes/unAuthRoutes';
+import AuthRoutes from './routes/authRoutes';
 
 function App() {
+  let token = localStorage.getItem('token') || 'token';
   return (
     <div className="App">
-      <h1>Project Management Tool Frontend</h1>
+      <Router>
+        { 
+          ! token ? 
+            <UnAuthRoutes/>
+          : 
+            <AuthRoutes/>
+        }
+      </Router>
     </div>
   );
 }
