@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./navbar.module.css";
 import { MdOutlineLogout } from "react-icons/md";
-import Sidebar from "../sidebar/sidebar";
 import { PiListDashesBold } from "react-icons/pi";
 export default function Navbar({ open, setOpen }) {
   return (

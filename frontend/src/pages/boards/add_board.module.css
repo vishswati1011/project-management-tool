@@ -1,0 +1,44 @@
+.add_board {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 100%;
+}
+
+.add_board_form {
+    padding: 100px;
+    width:400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.add_board_form input {
+    width:400px;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.add_board_form select {
+    width:410px;
+    height: 35px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.add_board_form button {
+    width:410px;
+    height: 35px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.members_container{
+    display: flex;
+    height :auto;
+    width: 100%;
+    padding:20px;
+    flex-wrap: wrap;
+}
+.members_table {
+    width: 98%;
+    border-collapse: collapse;
+}
+.table_head{
+    position: sticky;
+    top: 120px;
+    z-index: 100;
+}
+.members_table th, .members_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.members_table th {
+    background-color: #f2f2f2;
+}
+.members_table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.members_table tr:hover {
+    background-color: #f2f2f2;
+}
+.edit_button {
+    background-color: #f2f2f2;
+    padding: 5px;
+    background-color: rgb(0, 174, 255);
+}

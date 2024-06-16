@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5BA3F0;
+    background-color:var(--primary-color);
 
 }
 
@@ -27,7 +27,7 @@
     padding: 80px;
     border: 1px solid white;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--background-color);
 
 }
 .login_div h2{
@@ -55,8 +55,8 @@
     margin-top: 10px;
     padding: 10px;
     width: 425px;
-    background-color: #0364ed;
-    color: white;
+    background-color:var(--secondary-color);
+    color: var( --white-color);
     border: none;
     cursor: pointer;
     border-radius: 5px;
