@@ -6,6 +6,8 @@ const initializeRoutes = async function (app) {
         res.send('Backend is running!');
     });
 
+    app.use('/api', require('./router/router'));
+
     // app.use(appServer);
     app.listen(8080, () => {
         console.log('Server is running on port 8080');
