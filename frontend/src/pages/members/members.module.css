@@ -8,11 +8,12 @@
 .members_table {
     width: 98%;
     border-collapse: collapse;
+    margin-top: 120px;
 }
 .table_head{
-    position: sticky;
+    /* position: sticky;
     top: 120px;
-    z-index: 100;
+    z-index: 100; */
 }
 .members_table th, .members_table td {
     border: 1px solid #ddd;

@@ -2,6 +2,36 @@ const express = require('express');
 const router = express.Router();
 const Workspace = require('../../models/workspace');
 
+router.get('/byOrgId', (req, res) => {
+
+    let {organizationId} = req;
+    try{
+
+    Workspace.find({
+        organizationId: organizationId,
+        workspaceStatus: true
+    }).select('workspaceName')
+        .then(workspaces => {
+            res.status(201).json({
+                success: true,
+                allWorkspaces: workspaces,
+            });
+        })
+        .catch(error => {
+            res.status(400).json({
+                success: false,
+                message: 'Failed to get workspaces.',
+                error,
+            });
+        });
+    }catch(error){
+        res.status(400).json({
+            success: false,
+            message: 'Failed to get workspaces.',
+            error,
+        });
+    }
+})
 router.get('/', (req, res) => {
     const { userId } = req;
     Workspace.find({

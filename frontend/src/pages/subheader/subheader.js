@@ -39,13 +39,13 @@ export default function Home() {
      :  <ul>
      <li
        className={
-         pathname === "workspaces"
+         pathname === undefined
            ? styles.active_link_css
            : styles.inactive_link_css
        }
      >
        {" "}
-       <a href="/workspaces" alt="#all_workspace">
+       <a href="/" alt="#all_workspace">
          All Workspaces
        </a>
      </li>

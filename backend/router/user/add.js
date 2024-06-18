@@ -8,7 +8,7 @@ router.post("/", async (req, res) => {
 
   let { organizationId } = req;
 
-  let { email, username } = req.body;
+  let { email, username ,phone} = req.body;
  
   const passcode = generateCode();
   const encrypted = hashPassword(passcode);
@@ -18,6 +18,7 @@ router.post("/", async (req, res) => {
   const user = {
     email,
     username,
+    phone,
     password: encrypted,
     passcode,
     createdAt,
@@ -29,7 +30,6 @@ router.post("/", async (req, res) => {
     res.status(201).json({
       success: true,
       message: "User added.",
-      // data: data,
     });
   }).catch((err)=>{
     res.status(400).json({

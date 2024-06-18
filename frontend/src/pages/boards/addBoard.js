@@ -1,13 +1,36 @@
 import React, { useState } from 'react'
 import styles from './add_board.module.css'
+import {useGetByOrgIdQuery} from '../../rtk/workspaceSlice';
+import { useAddBoardMutation } from '../../rtk/boardSlice';
+import { useNavigate } from 'react-router-dom';
 
 export default function AddBoard() {
 
     const [board,setBoard] = useState('');
+    const navigate = useNavigate();
+    const [workspaceId,setWorkspaceId] = useState('');
+    const [addBoard,{error}] = useAddBoardMutation();
 
-    const handleSubmit = (e) => {
+    const {data} = useGetByOrgIdQuery()
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(board)
+
+        let payload = {
+            boardName : board,
+            workspaceId,
+            boardMember : [{b_memberid : localStorage.getItem('userId')}],
+            createdBy : localStorage.getItem('userId')
+        }
+        
+        let response = await addBoard(payload);
+        if(response.error){
+            alert("An error occurred: " + response.error.data?.message)
+            navigate('/')
+        } else if(response.data.success){
+            alert(response.data.message)
+        } else {
+            alert(error.data.message)
+        }
 
     }
   return (
@@ -20,11 +43,11 @@ export default function AddBoard() {
                     value={board} 
                     onChange={(e)=>setBoard(e.target.value)}
                 />
-                <select>
-                    <option value="0">Select Workspace</option>
-                    <option value="1">Workspace 1</option>
-                    <option value="2">Workspace 2</option>
-                    <option value="3">Workspace 3</option>
+                <select onChange={(e)=>setWorkspaceId(e.target.value)}>
+                    <option>Select Workspace</option>
+                   {data?.allWorkspaces?.map((workspace,index) => (
+                          <option key={index} value={workspace._id}>{workspace.workspaceName}</option>
+                   ))}
                 </select>
                 <button >Add board</button>
         </form>

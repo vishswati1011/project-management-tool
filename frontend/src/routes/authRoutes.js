@@ -28,8 +28,8 @@ export default function AuthRoutes() {
           <Subheader />
           <div  className={styles.main_screen}  >
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/workspaces" element={<Workspace />} />
+            <Route path="/dashboard" element={<Workspace />} />
+            <Route path="/" element={<Workspace />} />
             <Route path="/add_workspace" element={<AddWorkspace />} />
             <Route path="/boards" element={<Boards />} />
             <Route path="/add_board" element={<AddBoard />} />

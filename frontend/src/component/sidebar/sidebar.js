@@ -19,7 +19,7 @@ export default function Sidebar({open,setOpen}) {
         <ul>
             <li> <MdOutlineDashboard className={styles.icon}/> <a className={styles.link_side} href='/' alt='#dashboard'> Dashboard</a>  
             </li>
-            <li> <BsFillClipboard2DataFill className={styles.icon}/> <a className={styles.link_side} href='/workspaces' alt='#workspaces'>Workspace</a></li>
+            <li> <BsFillClipboard2DataFill className={styles.icon}/> <a className={styles.link_side} href='/' alt='#workspaces'>Workspace</a></li>
             <li> <LuUserSquare2 className={styles.icon}/> <a className={styles.link_side} href='/members' alt='#members'>Member</a></li>
             <li> <BiTask className={styles.icon}/> <a className={styles.link_side} href='/meeting' alt='#task'>Meeting</a></li>
             <li> <FaUserTie className={styles.icon}/> <a className={styles.link_side} href='/profile' alt='#profile'>Profile</a></li>

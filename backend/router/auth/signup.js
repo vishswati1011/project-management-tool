@@ -7,7 +7,6 @@ const { hashPassword } = require("../../middleware/authPassword");
 router.post("/", async (req, res) => {
 
   let { username, email, password, phone, organizationId } = req.body;
-  console.log("req.body",req.body)
 
   try {
     const findUser = await User.findOne({ email: email })
