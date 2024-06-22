@@ -5,7 +5,7 @@
     margin-top: 60px;
     position: fixed;
     height: 60px;
-    background: var(--secondary-color);
+    background: var(--yellow_secondary-color);
 }
  
 .sub_header p {
@@ -16,7 +16,7 @@
 .sub_header ul {
     list-style: none;
     display: flex;
-    color : var(--white-color);
+    color : var(--text-color);
 }
 
 .inactive_link_css {
@@ -26,7 +26,7 @@
 .sub_header ul li a {
   margin-left: 10px;
     text-decoration: none;
-    color : var(--white-color);
+    color : var(--text-color);
 }
 .inactive_link_css::after {
     content: '';
@@ -43,7 +43,7 @@
     width: 100%;
 } */
 .sub_header ul li:hover {
-    background-color: var(--primary-color);
+    background-color: var(--white-color);
     color: var(--white-color);
     padding: 5px;
     align-items: center;
@@ -52,7 +52,7 @@
 }
 
 .active_link_css {
-    background-color: var(--primary-color);
+    background-color: var(--white-color);
     color: var(--white-color);
     /* padding: 10px 20px; */
     padding: 5px;

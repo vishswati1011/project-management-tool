@@ -34,3 +34,25 @@
     padding: 5px;
     background-color: rgb(0, 174, 255);
 }
+
+  
+.table_popup {
+    border-radius: 5px;
+    transition: 2ms ease;
+    position: absolute;
+    right: 110px;
+    z-index: 1;
+    background-color: white !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.274) !important;
+    padding: 5px 0;
+  }
+  
+  .table_popup li {
+    padding: 5px 20px;
+    text-align: start;
+    list-style: none;
+  }
+  
+  .table_popup li:hover {
+    background-color: rgba(211, 211, 211, 0.288);
+  }

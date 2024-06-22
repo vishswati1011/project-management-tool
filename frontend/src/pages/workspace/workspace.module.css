@@ -38,3 +38,104 @@
     padding: 5px;
     background-color: rgb(0, 174, 255);
 }
+
+
+.trash_owner_menu {
+    cursor: pointer;
+  }
+  
+  .menu_icon {
+    cursor: pointer;
+  }
+  
+  .menu_icon:hover {
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    transition: all ease-in-out 0.2s;
+  }
+  
+  .menu_options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit_button , .delete_button {
+    cursor: pointer;
+    padding:5px 10px 5px 10px;
+  }
+  .edit_button:hover {
+    background: #46aeeb;
+    color: #fff;
+  }
+  .delete_button:hover {
+    background: #ff0000;
+    color: #fff;
+  }
+
+
+
+/* for modal */
+.delete_Workspace_modal_text {
+    font-style: normal;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .delete_Workspace_modal_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #f4f4f4;
+  }
+  .delete_Workspace_modal_button {
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: none;
+  }
+  .delete_Workspace_modal_button:hover {
+    background-color: #cfcdcd;
+  }
+  .delete_Workspace_modal_button_right {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: red;
+    padding: 5px 10px;
+    background-color: #cecdcd;
+    border-radius: 5px;
+    border: none;
+  }
+  .delete_Workspace_modal_button_right:hover {
+    background-color: crimson;
+    color: white;
+  }
+  
+
+
+  
+.table_popup {
+  border-radius: 5px;
+  transition: 2ms ease;
+  position: absolute;
+  right: 110px;
+  z-index: 1;
+  background-color: white !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.274) !important;
+  padding: 5px 0;
+}
+
+.table_popup li {
+  padding: 5px 20px;
+  text-align: start;
+  list-style: none;
+}
+
+.table_popup li:hover {
+  background-color: rgba(211, 211, 211, 0.288);
+}

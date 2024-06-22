@@ -2,7 +2,28 @@
     --primary-color: #5BA3F0;
     --secondary-color: #0364ed;
     --text-color: black;
-    --background-color: white;
+    --background-color: #685f45; 
     --white-color:white;
-    /* Add more color variables as needed */
+    --yellow-color:#eca33c;
+    --yellow_secondary-color:#9d8f63;
+
+    /* Add more color variables as needed  //F0F0F6 */
   }
+
+  body {
+    /* font-family: var(--primary-font);
+    font-size: var(--body-font-size);
+    color: var(--text-color); */
+    font-family:'Playfair Display SC';
+
+}
+/* 
+h1 {
+    font-size: var(--header-font-size);
+    color: var(--header-color);
+}
+
+h2 {
+    font-size: var(--subheader-font-size);
+    color: var(--subheader-color);
+} */

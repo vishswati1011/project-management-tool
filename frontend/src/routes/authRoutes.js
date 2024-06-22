@@ -13,7 +13,7 @@ import Members from "../pages/members/members";
 import AddMember from "../pages/members/addMember";
 
 export default function AuthRoutes() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <div>
       <Navbar setOpen={setOpen} open={open} />

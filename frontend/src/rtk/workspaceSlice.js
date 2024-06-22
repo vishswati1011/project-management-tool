@@ -34,7 +34,7 @@ export const workspaceApi = createApi({
                 }
             })
         }),
-        deleteWorkspace : builder.query({
+        deleteWorkspace : builder.mutation({
             query : (workspaceId) => ({
                 url : `workspace/delete/${workspaceId}`,
                 method : 'DELETE',
@@ -58,4 +58,4 @@ export const workspaceApi = createApi({
 
 })
 
-export const { useAddWorkspaceMutation, useGetWorkspaceQuery, useUpdateWorkspaceMutation,useGetByOrgIdQuery } = workspaceApi;
+export const { useAddWorkspaceMutation, useGetWorkspaceQuery, useUpdateWorkspaceMutation,useGetByOrgIdQuery ,useDeleteWorkspaceMutation} = workspaceApi;

@@ -1,0 +1,35 @@
+.login_div{
+    width: 300px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    /* background-color: var(--yellow-color); */
+
+}
+.login_div h2{
+    color: black;
+    margin-bottom: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 100%;
+}
+.input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 250px;
+}
+.button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 275px;
+    background-color:var(--secondary-color);
+    color: var( --white-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

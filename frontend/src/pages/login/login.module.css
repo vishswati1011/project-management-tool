@@ -27,7 +27,7 @@
     padding: 80px;
     border: 1px solid white;
     border-radius: 5px;
-    background-color: var(--background-color);
+    background-color: var(--yellow-color);
 
 }
 .login_div h2{

@@ -34,7 +34,7 @@ export const boardApi = createApi({
                 }
             })
         }),
-        deleteBoard: builder.query({
+        deleteBoard: builder.mutation({
             query : (boardId) => ({
                 url : `board/delete/${boardId}`,
                 method : 'DELETE',
@@ -58,4 +58,4 @@ export const boardApi = createApi({
 
 })
 
-export const { useAddBoardMutation, useGetBoardQuery, useUpdateBoardMutation,useGetByWorkspaceIdQuery } = boardApi;
+export const { useAddBoardMutation, useGetBoardQuery, useUpdateBoardMutation,useGetByWorkspaceIdQuery,useDeleteBoardMutation } = boardApi;

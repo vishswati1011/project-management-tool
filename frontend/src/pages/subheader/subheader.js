@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./subheader.module.css";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 export default function Home() {
   const location = useLocation();
   const pathname = location.pathname.split("/").filter((x) => x)?.[0];
@@ -45,9 +47,9 @@ export default function Home() {
        }
      >
        {" "}
-       <a href="/" alt="#all_workspace">
+       <Link to="/" alt="#all_workspace">
          All Workspaces
-       </a>
+       </Link>
      </li>
 
      <li
@@ -58,9 +60,9 @@ export default function Home() {
        }
      >
        {" "}
-       <a href="/add_workspace" alt="#new_workspace">
+       <Link to="/add_workspace" alt="#new_workspace">
          Add New Workspace{" "}
-       </a>
+       </Link>
      </li>
      <li
        className={
@@ -70,11 +72,30 @@ export default function Home() {
        }
      >
        {" "}
-       <a href="/add_board" alt="#new_board">
+       <Link to="/add_board" alt="#new_board">
          Add New Board{" "}
-       </a>
+       </Link>
      </li>
    </ul>}
+
+
+   {
+    pathname === 'boards' && 
+    <ul>
+    <li
+      className={
+        pathname === "boards"
+          ? styles.active_link_css
+          : styles.inactive_link_css
+      }
+    >
+      {" "}
+      <a href="/boards" alt="#all_member">
+        All Boards
+      </a>
+    </li>
+    </ul>
+   }
      
     </div>
   );

@@ -43,10 +43,10 @@ export const usersApi = createApi({
         }
       })
     }),
-    deleteUser : builder.query({
-      query : () =>({
-        url : 'user/delete',
-        method : 'GET',
+    deleteUser : builder.mutation({
+      query : (userId) =>({
+        url : `user/delete/${userId}`,
+        method : 'DELETE',
         headers : {
           'x-access-token' : localStorage.getItem('token')
         }
@@ -55,4 +55,4 @@ export const usersApi = createApi({
   })
 });
 
-export const { useFetchUserQuery, useCreateUserMutation,useFetchUserByIdQuery,useDeleteUserQuery,useUpdateUserMutation } = usersApi;
+export const { useFetchUserQuery, useCreateUserMutation,useFetchUserByIdQuery,useDeleteUserMutation,useUpdateUserMutation } = usersApi;
