@@ -12,7 +12,7 @@ router.delete('/:workspaceId', async (req, res) => {
         if (workspace.creadtedBy === userId) {
             const deletedWorkspace = await Workspace.findOneAndDelete({ _id: workspaceId });
             if (deletedWorkspace) {
-                res.status(200).json({ message: 'Workspace permanently deleted' });
+                res.status(200).json({ message: 'Workspace permanently deleted',success:true});
             }
         } else {
 
@@ -26,11 +26,11 @@ router.delete('/:workspaceId', async (req, res) => {
                 { new: true } // To return the updated document
               );
             if (deletedWorkspace) {
-                res.status(200).json({ message: 'Workspace permanently deleted' });
+                res.status(200).json({ message: 'Workspace permanently deleted' ,success:true});
             }
         }
     } catch (error) {
-        res.status(400).json({ message: error });
+        res.status(400).json({ message: error,success:false });
     }
 });
 

@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const Board = require('../../models/board');
 
-
-router.post('/:boardId', (req, res) => {
-    const boardId = req.params.boardId;
-    const boards = req.body;
-
-    Board.updateOne({ _id: boardId }, { $set: boards })
+router.post('/', (req, res) => {
+    const {boardName,boardId} = req.body;
+    let data = {
+        boardName,
+        updateAt: new Date()
+    }
+    Board.updateOne({ _id: boardId }, { $set: data })
         .then(board => {
             if (board.acknowledged) {
                 res.status(201).json({ success: true, message: 'Board updated.' });

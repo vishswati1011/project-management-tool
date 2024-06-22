@@ -12,7 +12,7 @@ router.delete('/:boardId', async (req, res) => {
         if (board.creadtedBy === userId) {
             const deletedBoard = await Board.findOneAndDelete({ _id: boardId });
             if (deletedBoard) {
-                res.status(200).json({ message: 'board permanently deleted' });
+                res.status(200).json({ message: 'board permanently deleted',success:true  });
             }
         } else {
 
@@ -26,11 +26,11 @@ router.delete('/:boardId', async (req, res) => {
                 { new: true } // To return the updated document
               );
             if (deletedBoard) {
-                res.status(200).json({ message: 'board permanently deleted' });
+                res.status(200).json({ message: 'board permanently deleted',success:true});
             }
         }
     } catch (error) {
-        res.status(400).json({ message: error });
+        res.status(400).json({ message: error ,success:false });
     }
 });
 

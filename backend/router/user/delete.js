@@ -10,14 +10,14 @@ router.delete("/:userId", async (req, res) => {
     if (user) {
       const deletedUser = await User.findOneAndDelete({ _id: userId });
       if (deletedUser) {
-        res.status(200).json({ message: "User permanently deleted." });
+        res.status(200).json({ message: "User permanently deleted." ,success : true });
       }
     } else {
-      res.status(400).json({ message: "User not found." });
+      res.status(400).json({ message: "User not found.",success:false });
     }
 
   } catch (error) {
-    res.status(400).json({ message: "failed to delete user." });
+    res.status(400).json({ message: "failed to delete user." , success :false });
   }
 });
 module.exports = router;

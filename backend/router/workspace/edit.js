@@ -3,14 +3,13 @@ const router = express.Router();
 const Workspace = require('../../models/workspace');
 const ObjectId = require('mongodb').ObjectId;
 
-router.post('/:workspaceId', (req, res) => {
+router.post('/', (req, res) => {
     
-    const workspaceId = req.params.workspaceId;
-    const workspaces = req.body;
+    const {workspaceName,workspaceId} = req.body;
 
     return Workspace.updateOne(
         { _id: new ObjectId(workspaceId) },
-        { $set: { ...workspaces, updatedAt: new Date() } }
+        { $set: {workspaceName, updatedAt: new Date() } }
     )
         .then(async workspace => {
             if (workspace.acknowledged) {
